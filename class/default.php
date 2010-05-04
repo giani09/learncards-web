@@ -8,6 +8,7 @@ require_once 'class/smarty/Smarty.class.php';
 
 $template = new Smarty();
 session_start();
+$messages = array();
 try
 {
 	$connection = new PDO($GLOBALS["db_type"].':dbname='.$GLOBALS["db_dbname"].';host='.$GLOBALS["db_host"].'', $GLOBALS["db_loginname"], $GLOBALS["db_loginpassword"]);
@@ -42,7 +43,7 @@ else{
 	$user = $_SESSION["user"];
 }
 
-$messages = array();
+
 
 
 ?>
